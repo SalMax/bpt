@@ -1,0 +1,190 @@
+/**
+ * ------------------------------------------------------------------------
+ * JA ZiteTemplate
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - Copyrighted Commercial Software
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites:  http://www.joomlart.com -  http://www.joomlancers.com
+ * This file may not be redistributed in whole or significant part.
+ * ------------------------------------------------------------------------
+ */
+
+.ja-ss-slideshow {
+	position: relative;
+	height: 309px;
+}
+
+.ja-ss-loading:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 21;
+}
+ 
+.ja-ss-wrap {
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+.ja-ss-items {
+	width: 100%;
+}
+
+.ja-ss-item {
+	display: block;
+	float: left;
+	margin: 0;
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	-webkit-backface-visibility: hidden;
+}
+
+.ja-ss-item.prev {
+	display: block;
+}
+
+.ja-ss-item.next {
+	display: block;
+}
+
+.ja-ss-item.curr {
+	z-index: 20; /* IE7,8 */
+}
+
+.ja-ss-item img {
+	background: #fff;
+	width: 100%;
+	max-width: 100%;
+}
+
+.ja-ss-item-bg {
+  z-index: 1;
+}
+
+.ja-ss-item-img.first {
+  z-index: 5;
+}
+
+.ja-ss-item-img.second {
+  z-index: 7;
+}
+
+.ja-ss-mask {
+	background: url(../images/sl-mask.png);
+	cursor: pointer;
+	display: block;
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	
+	-webkit-transition: all 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+	   -moz-transition: all 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+	    -ms-transition: all 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+	     -o-transition: all 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+	        transition: all 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+}
+
+.ja-ss-mask.active {
+	-webkit-transform: translate3d(0, 0, 0);
+	   -moz-transform: translate3d(0, 0, 0);
+	    -ms-transform: translate3d(0, 0, 0);
+	        transform: translate3d(0, 0, 0);
+}
+
+.ja-ss-desc {
+	color: #FFFFFF;
+	left: 0;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box; /* Opera/IE 8+ */
+	width: 100%;
+	padding: 20px;
+}
+
+.ja-ss-desc h3 {
+	color: #efd7b4;
+	line-height: normal;
+	font-size: 200%;
+	overflow: visible;
+	margin: 0;
+}
+
+.ja-ss-desc h3 a {
+	color: inherit;
+	line-height: normal;
+	text-decoration: none;
+}
+
+.ja-ss-btns {
+	z-index: 900;
+	position: absolute;
+	right: 0;
+	bottom: 60px;
+}
+
+.ja-ss-btns span {
+	background: #000;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	float: left;
+	margin-right: 5px;
+	padding: 2px 5px;
+}
+
+.ja-ss-thumbs-wrap {
+	height: 60px;
+	width: 100%;
+	clear: both;
+	position: relative;
+	bottom: 60px;
+	overflow: hidden;
+	z-index: 101;
+}
+
+.ja-ss-thumbs {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 5000px;
+}
+
+.ja-ss-thumbs div {
+	cursor: pointer;
+	display: block;
+	float: left;
+	margin: 0;
+	color: #191a1b;
+	text-align: center;
+	overflow: hidden;
+	background: #000;
+}
+
+.ja-ss-thumbs div img {
+	opacity: 0.3;
+}
+
+.ja-ss-thumbs div.active {
+	color: #CF4E33;
+}
+
+.ja-ss-thumbs div.active img {
+	opacity: 1;
+}
+
